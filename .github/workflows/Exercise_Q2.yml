@@ -1,9 +1,15 @@
 name: Egocentric
 run-name: ${{ github.actor }} is testing out exercise 2
-on:[push]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 jobs:
 	Testing Q2:
-		runs-on: ubuntu-latest
+		runs-on: macos-latest
 		steps:
 			- name: My name in README
 			  run: |
