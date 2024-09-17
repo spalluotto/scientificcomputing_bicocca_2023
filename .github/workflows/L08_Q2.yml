@@ -16,4 +16,4 @@ jobs:
     steps:
     - name: Run tests
       run: |
-        python test_plot_frequency_func.py
+        python working/L08/test_plot_frequency_func.py
