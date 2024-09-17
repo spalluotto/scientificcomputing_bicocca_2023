@@ -1,0 +1,19 @@
+name: L08_Q2
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - name: Run tests
+      run: |
+        python test_plot_frequency_func.py
