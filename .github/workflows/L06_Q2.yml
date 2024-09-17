@@ -12,6 +12,8 @@ jobs:
   Testing_Q2:
     runs-on: macos-latest 
     steps:
+      - name: check repo
+        uses: actions/checkout@v3
       - name: My name in README
         run: |
           if ! grep -q "Simona" README.md; then
