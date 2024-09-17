@@ -14,8 +14,18 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Checkout repository
+      - name: check repo
         uses: actions/checkout@v3
-      - name: Run tests	
+
+      - name: python env
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: matplotlib
+        run: |
+          pip install matplotlib
+
+      - name: tests	
         run: |
           python working/L08/test_plot_frequency_func.py
